@@ -5,7 +5,7 @@ function App() {
     <div className="App">
 
       <h1>Ayurveda GPT</h1>
-
+        
     </div>
   );
 }
