@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+       <header className="App-header">
         <h1>AyurGenius: Your Ayurvedic Companion</h1>
         <p>Welcome to AyurGenius, your personal guide to Ayurveda!</p>
         <p>Ask any Ayurveda-related questions, and AyurGenius will provide insightful answers.</p>
