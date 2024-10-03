@@ -11,6 +11,7 @@ const ChatScreen = () => {
     const updatedMessages = [...messages, { text: newMessage, sender: 'user' }];
     setMessages(updatedMessages);
     handleGPTResponse("Mock GPT Response");
+    setNewMessage(''); // Clear input after sending
   };
 
   const handleGPTResponse = (response) => {
@@ -35,8 +36,8 @@ const ChatScreen = () => {
           placeholder="Type your message..."
         />
         <button onClick={handleSendMessage}>Send</button>
-        <Link to="/">Back to Home</Link>
       </div>
+      <Link className={styles['back-link']} to="/">Back to Home</Link>
     </div>
   );
 };

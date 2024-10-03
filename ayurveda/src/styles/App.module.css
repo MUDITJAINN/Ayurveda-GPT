@@ -163,3 +163,27 @@
   border-top: 1px solid #555;
   font-size: 14px;
 }
+
+@media (max-width: 768px) {
+  .carouselBtn {
+    font-size: 18px;
+  }
+
+  .ctaButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .features h2 {
+    font-size: 28px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+}
