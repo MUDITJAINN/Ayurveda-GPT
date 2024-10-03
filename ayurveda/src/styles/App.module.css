@@ -1,0 +1,165 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carouselItem {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carouselBtn.left {
+  left: 10px;
+}
+
+.carouselBtn.right {
+  right: 10px;
+}
+
+.features {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.features h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.features h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #008080;
+  margin: 15px auto 0;
+}
+
+.carousel h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.carousel p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: #008080;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.ctaButton {
+  background-color: #ffffff;
+  color: #008080;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.ctaButton:hover {
+  background-color: #005555;
+  color: white;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+}

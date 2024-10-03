@@ -1,36 +1,33 @@
-// ChatScreen.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "./App.css"
+import styles from '../styles/ChatScreen.module.css';
 
-const ChatScreen = () => 
-  {
+const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
   const handleSendMessage = () => {
     if (newMessage.trim() === '') return;
-
-    // Your Ayurveda GPT functionality here
-    // Example: AyurvedaGPT.sendMessage(newMessage).then(response => handleGPTResponse(response));
+    const updatedMessages = [...messages, { text: newMessage, sender: 'user' }];
+    setMessages(updatedMessages);
+    handleGPTResponse("Mock GPT Response");
   };
 
-  // Handle Ayurveda GPT responses
   const handleGPTResponse = (response) => {
     const newMessages = [...messages, { text: response, sender: 'gpt' }];
     setMessages(newMessages);
   };
 
   return (
-    <div className="chat-screen">
-      <div style={{ height: '500px', border: '1px solid #ccc', overflowY: 'auto' }}>
+    <div className={styles['chat-screen']}>
+      <div className={styles['chat-messages']}>
         {messages.map((msg, index) => (
-          <div key={index} className={msg.sender === 'user' ? 'user-message' : 'gpt-message'}>
+          <div key={index} className={msg.sender === 'user' ? styles['user-message'] : styles['gpt-message']}>
             {msg.text}
           </div>
         ))}
       </div>
-      <div style={{ marginTop: '10px' }}>
+      <div className={styles['chat-input']}>
         <input
           type="text"
           value={newMessage}
