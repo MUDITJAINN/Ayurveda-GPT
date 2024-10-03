@@ -101,6 +101,38 @@ Wait for the maintainers to review your pull request. If everything looks good, 
 - Use **descriptive** variable and function names.
 - Components should be as **small and simple** as possible.
 - Use `let` and `const` instead of `var`.
+
+## Tech Stack
+
+The project is built using the following technologies:
+
+### Frontend:
+- **React.js**: JavaScript library for building user interfaces
+- **HTML5 & CSS3**: Structuring and styling the web pages
+- **JavaScript (ES6+)**: Modern JavaScript features and syntax
+- **Bootstrap/Tailwind CSS**: For responsive design and styling
+
+### Backend:
+- **Node.js**: Runtime environment for executing JavaScript on the server
+- **Express.js**: Lightweight web framework for Node.js
+
+### Database:
+- **MongoDB**: NoSQL database for storing user data and content
+
+### AI Integration:
+- **OpenAI GPT-3 API**: For generating personalized Ayurvedic responses
+
+### Authentication:
+- **JWT (JSON Web Token)**: For secure user authentication
+
+### Deployment:
+- **Netlify**: For frontend hosting
+- **Heroku/Render**: For backend hosting
+
+## Show Your Support
+
+If you find this project useful or interesting, please **star the repository**! Your support helps motivate the development of new features and improvements.
+
 ---
 ## Code of Conduct :handshake:
 Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) to create a positive, inclusive, and respectful environment for everyone involved.
