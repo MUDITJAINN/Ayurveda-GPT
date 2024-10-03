@@ -8,6 +8,8 @@ Welcome, and thank you for your interest in contributing to **Ayurveda GPT**, a 
 
 ## Getting Started :rocket:
 
+We welcome contributions! If you have suggestions to enhance the website or fix existing issues, please feel free to open an issue or submit a pull request.
+
 ### Fork the Repository
 
 1. Navigate to the repository on GitHub: `https://github.com/MUDITJAINN/Ayurveda-GPT`.
