@@ -10,7 +10,7 @@ Welcome, and thank you for your interest in contributing to **Ayurveda GPT**, a 
 
 ### Fork the Repository
 
-1. Navigate to the repository on GitHub: `[Insert Repository URL]`.
+1. Navigate to the repository on GitHub: `https://github.com/MUDITJAINN/Ayurveda-GPT`.
 2. Click the **Fork** button at the top right to create a personal copy of the repository.
 
 ### Clone the Repository
