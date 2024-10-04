@@ -210,3 +210,45 @@ body {
 .chat-input button:hover {
   background-color: #005555; /* Darker teal on hover */
 }
+
+
+
+/* Add to App.css or create a new responsive CSS file */
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 20px;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .features {
+    padding: 20px;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* ChatScreen.css adjustments */
+.chat-screen {
+  padding: 10px; 
+}
+
+.chat-input {
+  flex-direction: column; 
+}
+
+.chat-input input {
+  margin-bottom: 10px; 
+  width: 100%;  
+}
+
+.chat-input button {
+  width: 100%;  
+}
