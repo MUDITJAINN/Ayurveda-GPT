@@ -1,0 +1,20 @@
+name: Auto-comment on new issues and pull requests
+
+on:
+  issues:
+    types: [opened]  
+  pull_request:
+    types: [opened]  
+
+jobs:
+  add_comment:
+    runs-on: ubuntu-latest  
+
+    steps:
+    - name: Add a comment to the issue or pull request
+      uses: actions-ecosystem/action-create-comment@v1  
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  
+        issue_number: ${{ github.event.issue.number || github.event.pull_request.number }}  
+        body: |
+          ${{ github.event_name == 'issues' && 'Thank you @${{ github.event.issue.user.login }} for bringing up this issue to help enhance our project even further! We\'ll review it soon. 🙌❤️' || github.event_name == 'pull_request' && 'Thank you for opening a pull request @${{ github.event.pull_request.user.login }}. We\'ll review it as soon as possible 🙌❤️' }}
