@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/ChatScreen.module.css';
 
-const ChatScreen = () => {
+const ChatScreen = ({ isDarkMode }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
@@ -19,7 +19,7 @@ const ChatScreen = () => {
   };
 
   return (
-    <div className={styles['chat-screen']}>
+    <div className={`${styles['chat-screen']} ${isDarkMode ? styles.dark : ''}`}>
       <div className={styles['chat-messages']}>
         {messages.map((msg, index) => (
           <div key={index} className={msg.sender === 'user' ? styles['user-message'] : styles['gpt-message']}>

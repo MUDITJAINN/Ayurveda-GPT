@@ -6,6 +6,11 @@ import styles from '../styles/App.module.css';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDarkMode, setIsDarkMode] = useState(false); // Dark mode state
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
 
   const features = [
     {
@@ -31,8 +36,8 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.app}>
-      <Header />
+    <div className={`${styles.app} ${isDarkMode ? styles.dark : ''}`}>
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
 
       <section className={styles.features}>
         <h2 className={styles.featuresHeading}>Features</h2> {/* Features Heading */}

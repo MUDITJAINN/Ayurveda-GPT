@@ -15,12 +15,17 @@ body {
 }
 
 .App-header {
-  background-color: #008080;
+  background-color: #008080; /* Light mode background */
   padding: 40px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dark .App-header {
+  background-color: #005555; /* Dark mode background */
+  color: #e0e0e0; /* Light text color */
 }
 
 .App-link {
@@ -37,10 +42,14 @@ body {
 }
 
 .cta {
-  background-color: #008080;
+  background-color: #008080; /* Light mode CTA background */
   color: white;
   padding: 40px;
   text-align: center;
+}
+
+.dark .cta {
+  background-color: #005555; /* Dark mode CTA background */
 }
 
 .cta h2 {
@@ -64,10 +73,15 @@ body {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #333; /* Light mode footer background */
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+.dark .footer {
+  background-color: #1c1c1c; /* Dark mode footer background */
+  color: #e0e0e0; /* Light text color for footer */
 }
 
 /* App.css */
@@ -87,12 +101,17 @@ body {
 }
 
 .App-header {
-  background-color: #008080;
+  background-color: #008080; /* Light mode background */
   padding: 40px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dark .App-header {
+  background-color: #005555; /* Dark mode background */
+  color: #e0e0e0; /* Light text color */
 }
 
 .App-link {
@@ -109,10 +128,14 @@ body {
 }
 
 .cta {
-  background-color: #008080;
+  background-color: #008080; /* Light mode CTA background */
   color: white;
   padding: 40px;
   text-align: center;
+}
+
+.dark .cta {
+  background-color: #005555; /* Dark mode CTA background */
 }
 
 .cta h2 {
@@ -136,10 +159,15 @@ body {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #333; /* Light mode footer background */
   color: white;
   padding: 20px;
   text-align: center;
+}
+
+.dark .footer {
+  background-color: #1c1c1c; /* Dark mode footer background */
+  color: #e0e0e0; /* Light text color for footer */
 }
 
 /* ChatScreen.css */

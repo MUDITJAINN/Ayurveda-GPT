@@ -3,7 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* Light mode background */
+}
+
+.dark {
+  background-color: #1a1a1a; /* Dark mode background */
+  color: #e0e0e0; /* Light text color for better readability */
 }
 
 .carousel {
@@ -45,17 +50,18 @@
 .features {
   text-align: center;
   padding: 40px;
-  background-color: #f9f9f9;
-  position: relative;
-  overflow: hidden;
+  background-color: #f9f9f9; /* Light mode */
+}
+
+.dark .features {
+  background-color: #2a2a2a; /* Dark mode background for features */
 }
 
 .features h2 {
   font-size: 36px;
-  color: #333;
+  color: #008080; /* Teal color for headings */
   margin-bottom: 30px;
   font-weight: 700;
-
   text-transform: capitalize;
   letter-spacing: 2px;
   position: relative;
@@ -67,27 +73,31 @@
   display: block;
   width: 50px;
   height: 3px;
-  background-color: #008080;
+  background-color: #008080; /* Teal underline */
   margin: 15px auto 0;
 }
 
 .carousel h3 {
   font-size: 24px;
-  color: #333;
+  color: #008080; /* Teal color for feature titles */
   margin-bottom: 15px;
 }
 
 .carousel p {
   font-size: 16px;
-  color: #666;
+  color: #cccccc; /* Light gray for descriptions */
   margin-bottom: 20px;
 }
 
 .cta {
-  background-color: #008080;
+  background-color: #008080; /* Teal background for CTA */
   color: white;
   padding: 40px;
   text-align: center;
+}
+
+.dark .cta {
+  background-color: #005555; /* Darker teal for dark mode CTA */
 }
 
 .cta h2 {
@@ -106,16 +116,26 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.dark .ctaButton {
+  background-color: #008080; /* Dark mode button background */
+  color: #ffffff; /* Dark mode button text color */
+}
+
 .ctaButton:hover {
   background-color: #005555;
   color: white;
 }
 
 .footer {
-  background-color: #333;
+  background-color: #333; /* Light gray for footer */
   color: #fff;
   padding: 20px 0;
   text-align: center;
+}
+
+.dark .footer {
+  background-color: #212121; /* Darker gray for footer in dark mode */
+  color: #e0e0e0; /* Light text color for footer */
 }
 
 .footer-content {
@@ -136,6 +156,7 @@
 .footer-section h4 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #008080; /* Teal color for footer section headings */
 }
 
 .footer-section ul {
@@ -148,13 +169,13 @@
 }
 
 .footer-section ul li a {
-  color: #ccc;
+  color: #cccccc; /* Light gray for footer links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #fff;
+  color: #ffffff; /* White on hover for better visibility */
 }
 
 .footer-bottom {
