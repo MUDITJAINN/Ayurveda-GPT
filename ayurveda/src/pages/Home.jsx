@@ -24,16 +24,6 @@ const Home = () => {
       description:
         "Receive daily wellness tips and Ayurvedic practices to enhance your overall well-being.",
     },
-    {
-      title: "Holistic Lifestyle Plans",
-      description:
-        "Tailored lifestyle plans to maintain balance between body, mind, and spirit through Ayurveda.",
-    },
-    {
-      title: "Expert Consultations",
-      description:
-        "Connect with Ayurvedic experts for personalized consultations and advice.",
-    },
   ];
 
   const settings = {
