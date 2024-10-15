@@ -1,64 +1,96 @@
 .resources-section {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 40px;
     color: #007bff;
+    font-size: 1.8rem;
 }
 
-.resource-list {
-    list-style-type: none;
-    padding: 0;
+.resources-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.resource-list li {
-    margin: 10px 0;
+.resource-category {
+    padding: 20px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+    background-color: rgb(223, 230, 242);
+}
+
+.resource-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 .App-link {
     color: #007bff;
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .App-link:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-    text-decoration: underline;
+    color: #0056b3;
 }
 
 .suggestion-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .suggestion-input {
-    padding: 8px;
-    margin-right: 5px;
+    padding: 10px;
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .suggestion-button {
-    padding: 8px 12px;
+    padding: 10px 20px;
     background-color: #28a745;
+    margin-left: 10px;
     color: white;
     border: none;
     border-radius: 5px;
