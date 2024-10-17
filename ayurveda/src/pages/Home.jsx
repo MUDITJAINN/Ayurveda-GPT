@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styles from "../styles/App.module.css";
-import AyurvedaBooks from "../components/AyurvedaBooks";
 
 const Home = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const features = [
     {
       title: "Personalized Guidance",
@@ -26,14 +26,15 @@ const Home = () => {
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % features.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prevSlide) => (prevSlide - 1 + features.length) % features.length
-    );
+  const settings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Infinite looping of slides
+    speed: 500, // Transition speed
+    slidesToShow: 1, // Number of slides to show at a time
+    slidesToScroll: 1, // Number of slides to scroll per click
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Autoplay interval in milliseconds (3 seconds)
+    arrows: true, // Show next/prev arrows
   };
 
   return (
@@ -41,38 +42,15 @@ const Home = () => {
       <Header />
 
       <section className={styles.features}>
-        <h2 className={styles.featuresHeading}>Features</h2>{" "}
-        {/* Features Heading */}
-        <div className={styles.carousel}>
-          {/* Left button */}
-          <button
-            className={`${styles.carouselBtn} ${styles.left}`}
-            onClick={prevSlide}
-          >
-            &#60;
-          </button>
-
-          {/* Carousel content */}
-          <div
-            className={styles.carouselInner}
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {features.map((feature, index) => (
-              <div className={styles.carouselItem} key={index}>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Right button */}
-          <button
-            className={`${styles.carouselBtn} ${styles.right}`}
-            onClick={nextSlide}
-          >
-            &#62;
-          </button>
-        </div>
+        <h2 className={styles.featuresHeading}>Features</h2>
+        <Slider {...settings}>
+          {features.map((feature, index) => (
+            <div className={styles.carouselItem} key={index}>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </Slider>
       </section>
 
       <section className={styles.cta}>
@@ -82,10 +60,7 @@ const Home = () => {
           Get Started
         </Link>
       </section>
-      <section className={styles.books}>
-        <h2>Explore Ayurvedic Books </h2>
-        <AyurvedaBooks />
-      </section>
+
       <Footer />
     </div>
   );
