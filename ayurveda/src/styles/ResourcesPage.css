@@ -1,0 +1,103 @@
+.resources-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #007bff;
+    font-size: 1.8rem;
+}
+
+.resources-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.resource-category {
+    padding: 20px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: scale(1.05);
+    background-color: rgb(223, 230, 242);
+}
+
+.resource-thumbnail {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.App-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.App-link:hover {
+    color: #0056b3;
+}
+
+.suggestion-form {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.suggestion-input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.suggestion-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    margin-left: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion-button:hover {
+    background-color: #218838;
+}
