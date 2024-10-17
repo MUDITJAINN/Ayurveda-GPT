@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../styles/ChatScreen.module.css';
 
-const ChatScreen = () => {
+const ChatScreen = ({ isDarkMode }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -64,6 +64,24 @@ const ChatScreen = () => {
   };
 
   return (
+dark-mode
+    <div className={`${styles['chat-screen']} ${isDarkMode ? styles.dark : ''}`}>
+      <div className={styles['chat-messages']}>
+        {messages.map((msg, index) => (
+          <div key={index} className={msg.sender === 'user' ? styles['user-message'] : styles['gpt-message']}>
+            {msg.text}
+          </div>
+        ))}
+      </div>
+      <div className={styles['chat-input']}>
+        <input
+          type="text"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={handleSendMessage}>Send</button>
+        <Link to="/">Back to Home</Link>
       <div className={styles['chat-screen']}>
         <div className={styles['chat-messages']}>
           {messages.map((msg, index) => (

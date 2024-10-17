@@ -1,0 +1,14 @@
+{
+  "name": "ayurveda-gpt",
+  "version": "1.0.0",
+  "description": "Welcome, and thank you for your interest in contributing to **Ayurveda GPT**, a React Web Application! We’re excited to have you participate in **Hacktoberfest 2024**! This guide will walk you through how to contribute and the guidelines to follow.",
+  "main": "index.js",
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
+  "author": "",
+  "license": "ISC"
+}
